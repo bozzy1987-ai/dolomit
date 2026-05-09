@@ -37,7 +37,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-stone-800">O firmie</h2>
           <p className="text-lg text-stone-600 mb-8 max-w-2xl mx-auto">
-            Ponad 130 lat tradycji górniczej. Własne złoże dolomitu w Ząbkowicach Śląskich. 
+            Ponad 130 lat historii. Własne złoże dolomitu w Ząbkowicach Śląskich. 
             Polski producent z certyfikowaną jakością.
           </p>
           <a href="/o-firmie" className="inline-flex items-center gap-2 bg-stone-800 hover:bg-stone-900 text-white font-semibold px-8 py-4 rounded-xl transition-all">

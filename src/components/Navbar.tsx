@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const menuItems = [
   { href: "/", label: "Strona główna" },
+  { href: "/aktualnosci", label: "Aktualności" },
   { href: "/o-firmie", label: "O firmie", children: [
     { href: "/o-firmie/historia", label: "Historia" },
     { href: "/o-firmie/certyfikaty", label: "Certyfikaty" },
@@ -16,8 +17,7 @@ const menuItems = [
     { href: "/o-firmie/akcjonariusze", label: "Akcjonariusze" },
   ]},
   { href: "/kruszywa", label: "Kruszywa budowlane" },
-  { href: "/nawozy", label: "Nawozy" },
-  { href: "/aktualnosci", label: "Aktualności" },
+  { href: "/nawozy", label: "Wapno nawozowe" },
   { href: "/dotacje", label: "Dotacje" },
   { href: "/kontakt", label: "Kontakt" },
 ];

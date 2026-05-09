@@ -16,7 +16,7 @@ const slides = [
   {
     image: "/dz2.jpg",
     title: "Wapno nawozowe",
-    subtitle: "z magnezem",
+    subtitle: "wapno",
     description: "Wysokiej jakości nawóz wapniowo-magnezowy dla rolnictwa",
     cta: "Zobacz produkty",
     href: "/nawozy"
@@ -24,7 +24,7 @@ const slides = [
   {
     image: "/1-budy.jpg",
     title: "Ponad 130 lat",
-    subtitle: "tradycji górniczej",
+    subtitle: "historia",
     description: "Polski producent z własnym złożem",
     cta: "Poznaj nas",
     href: "/o-firmie"

@@ -100,6 +100,19 @@ export default function HistoriaPage() {
               </div>
             </div>
           </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-100 mt-8">
+            <h2 className="text-2xl font-bold text-stone-900 mb-6 text-center">Film historyczny</h2>
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-xl"
+                src="https://www.youtube.com/embed/2MhM2ukF1SU"
+                title="Historia Kopalni Dolomit"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>

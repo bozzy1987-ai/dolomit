@@ -25,7 +25,6 @@ export default function KruszywaPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 mb-12">
-            <h2 className="text-xl font-bold text-stone-900 mb-6">O kopalni</h2>
             <div className="prose prose-stone max-w-none text-stone-600 leading-relaxed space-y-4">
               <p>
                 PPUH "DOLOMIT" Kopalnia "Ząbkowice" Spółka Akcyjna jest właścicielem kopalni odkrywkowej dolomitu. 
