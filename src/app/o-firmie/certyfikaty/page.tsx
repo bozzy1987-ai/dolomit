@@ -5,20 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 const certs = [
-  { src: "/certyfikaty/00035.jpg", alt: "Certyfikat ISO 9001" },
-  { src: "/certyfikaty/certyfikat_prb.jpg", alt: "Certyfikat PRB" },
-  { src: "/certyfikaty/certyfikat_jakosc.jpg", alt: "Certyfikat jakości" },
-  { src: "/certyfikaty/00036.jpg", alt: "Certyfikat 00036" },
-  { src: "/certyfikaty/00037.jpg", alt: "Certyfikat 00037" },
-  { src: "/certyfikaty/00038.jpg", alt: "Certyfikat 00038" },
+  { src: "/00035.jpg", alt: "Certyfikat ISO 9001" },
+  { src: "/certyfikat_prb.jpg", alt: "Certyfikat PRB" },
+  { src: "/certyfikat_jakosc.jpg", alt: "Certyfikat jakości" },
+  { src: "/00036.jpg", alt: "Certyfikat 00036" },
+  { src: "/00037.jpg", alt: "Certyfikat 00037" },
+  { src: "/00038.jpg", alt: "Certyfikat 00038" },
   { src: "/certyfikaty/bcc_rekomendacja.jpg", alt: "BCC Rekomendacja" },
-  { src: "/certyfikaty/dsc_4205.jpg", alt: "DSC 4205" },
-  { src: "/certyfikaty/medal.jpg", alt: "Medal" },
-  { src: "/certyfikaty/solidna2011.jpg", alt: "Solidna Firma 2011" },
-  { src: "/certyfikaty/solidna2012.jpg", alt: "Solidna Firma 2012" },
-  { src: "/certyfikaty/swscan00029.jpg", alt: "SW Scan 00029" },
-  { src: "/certyfikaty/swscan00138.jpg", alt: "SW Scan 00138" },
-  { src: "/certyfikaty/wjk.jpg", alt: "WJK" },
+  { src: "/dsc_4205.jpg", alt: "DSC 4205" },
+  { src: "/medal.jpg", alt: "Medal" },
+  { src: "/solidna2011.jpg", alt: "Solidna Firma 2011" },
+  { src: "/solidna2012.jpg", alt: "Solidna Firma 2012" },
+  { src: "/swscan00029.jpg", alt: "SW Scan 00029" },
+  { src: "/swscan00138.jpg", alt: "SW Scan 00138" },
+  { src: "/wjk.jpg", alt: "WJK" },
 ];
 
 export default function CertyfikatyPage() {
@@ -76,15 +76,15 @@ export default function CertyfikatyPage() {
 
               <button
                 onClick={prev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur rounded-full flex items-center justify-center text-white transition-all"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-green-700 hover:bg-green-600 text-white rounded-full flex items-center justify-center transition-all shadow-lg"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               <button
                 onClick={next}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur rounded-full flex items-center justify-center text-white transition-all"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-green-700 hover:bg-green-600 text-white rounded-full flex items-center justify-center transition-all shadow-lg"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -107,18 +107,6 @@ export default function CertyfikatyPage() {
                 Kliknij na certyfikat aby powiększyć
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-100">
-            <h2 className="text-2xl font-bold text-stone-900 mb-4 text-center">Potwierdzone badania</h2>
-            <p className="text-stone-600 text-center max-w-2xl mx-auto">
-              Nasze produkty uzyskały pozytywne opinie w Instytucie Uprawy, Nawożenia i Gleboznawstwa w Puławach, 
-              Instytucie Warzywnictwa w Skierniewicach oraz Instytucie Sadownictwa i Kwiaciarstwa w Skierniewicach.
-            </p>
           </div>
         </div>
       </section>

@@ -72,51 +72,17 @@ export default function DotacjePage() {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-white rounded-2xl p-6 shadow-sm mb-8">
-            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
-              <div className="flex items-center gap-3">
-                <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-white border-2 border-gray-200">
-                  <div className="bg-red-600 w-full h-full flex items-center justify-center">
-                    <div className="text-white text-xs font-bold text-center leading-tight px-1">
-                      <div className="text-[8px]">FUNDUSZE</div>
-                      <div className="text-[10px]">EUROPEJSKIE</div>
-                    </div>
-                  </div>
-                </div>
-                <span className="text-stone-700 font-medium text-sm">Fundusze Europejskie</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-white border-2 border-gray-200">
-                  <div className="bg-white w-full h-full flex flex-col items-center justify-center">
-                    <div className="w-3 h-3 bg-red-600 mb-[2px]"></div>
-                    <div className="flex gap-[2px]">
-                      <div className="w-2 h-2 bg-red-600"></div>
-                      <div className="w-2 h-2 bg-red-600"></div>
-                      <div className="w-2 h-2 bg-red-600"></div>
-                    </div>
-                  </div>
-                </div>
-                <span className="text-stone-700 font-medium text-sm">Polska</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-white border-2 border-gray-200">
-                  <div className="bg-blue-500 w-full h-full flex items-center justify-center">
-                    <div className="flex gap-[2px] flex-wrap justify-center">
-                      {[...Array(12)].map((_, i) => (
-                        <div key={i} className="w-1 h-1 bg-yellow-400 rounded-full"></div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <span className="text-stone-700 font-medium text-sm">Unia Europejska</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-white border-2 border-gray-200">
-                  <div className="bg-green-600 w-full h-full flex items-center justify-center">
-                    <span className="text-white text-sm font-bold">BGK</span>
-                  </div>
-                </div>
-                <span className="text-stone-700 font-medium text-sm">Bank Gospodarstwa Krajowego</span>
-              </div>
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              <img 
+                src="/fundusze-europejskie.jpg" 
+                alt="Fundusze Europejskie" 
+                className="h-64 w-auto rounded-lg"
+              />
+              <img 
+                src="/bgk-logo.jpg" 
+                alt="Bank Gospodarstwa Krajowego" 
+                className="h-24 w-auto rounded-lg"
+              />
             </div>
           </div>
 

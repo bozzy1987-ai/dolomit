@@ -5,13 +5,13 @@ const newsData: Record<string, {
   date: string;
   category: string;
   content: string;
-  image: string | null;
+  images: string[];
 }> = {
   "116-zima-to-dobry-moment-na-wapnowanie-pol": {
     title: "Zima to dobry moment na wapnowanie pól",
     date: "15 stycznia 2025",
     category: "Rolnictwo",
-    image: "/zima_wapnowanie.jpeg",
+    images: ["/zima_wapnowanie.jpeg"],
     content: `Przeczytaj poniższy artykuł i dowiedz się dlaczego warto już dziś pomyśleć o wapnowaniu swojego pola!
 
 Choć zima kojarzy się z ograniczeniem prac polowych, coraz więcej rolników decyduje się właśnie w tym okresie na wapnowanie pól. Zamarznięta gleba umożliwia łatwy wjazd maszyn, ogranicza ugniatanie ziemi i pozwala sprawnie przygotować stanowiska pod wiosenne uprawy. W wielu gospodarstwach taki zabieg realnie ułatwia organizację pracy i pozwala wejść w nowy sezon z lepiej przygotowaną glebą.
@@ -81,45 +81,81 @@ Wapno nawozowe zawierające magnez uzyskało pozytywne opinie m.in. w:
     title: "Spotkanie Barbórkowe 2025",
     date: "4 grudnia 2025",
     category: "Firma",
-    image: "/Barbrka_Dolomit_2025-0.jpg",
-    content: `W dniu 4 grudnia 2025 roku odbyło się tradycyjne spotkanie barbórkowe w Event Place Boho Pogoria w Dąbrowie Górniczej. W wydarzeniu uczestniczyli przedstawiciele naszej Kopalni oraz zaproszeni goście.
+    images: [
+      "/Barbrka_Dolomit_2025-0.jpg",
+      "/Barbrka_Dolomit_2025-41.jpg",
+      "/Barbrka_Dolomit_2025-44.jpg",
+      "/Barbrka_Dolomit_2025-24.jpg",
+      "/Barbrka_Dolomit_2025-63.jpg",
+      "/Barbrka_Dolomit_2025-65.jpg"
+    ],
+    content: `W dniu 4 grudnia 2025 roku odbyło się spotkanie barbórkowe w Event Place Boho Pogoria w Dąbrowie Górniczej. W wydarzeniu uczestniczyli przedstawiciele naszej Kopalni oraz zaproszeni goście - politycy, przedstawiciele samorządów, duchowni, środowisko naukowe i edukacyjne, przedstawiciele urzędu górniczego, branży medycznej oraz przedsiębiorcy.
 
-Było to wyjątkowe spotkanie, podczas którego podsumowano miniony rok i nagrodzono najbardziej wyróżniających się pracowników. Oprawę muzyczną zapewniła orkiestra górnicza.
+Zapraszamy do obejrzenia galerii wykonanej przez zespół z wydawnictwa Europerspektywy z tego wydarzenia.
 
-Dziękujemy wszystkim uczestnikom za wspólne świętowanie!`
+Zapraszamy również na stronę Europerspektywy, gdzie znajduje się fotogaleria z imprezy autorstwa Pana Roberta Pilszaka: https://europerspektywy.eu/barborka-2025-dolomit-swieto-i-plany-rozwoju/`
   },
   "114-spotkanie-sfpp-w-naszej-siedzibie": {
     title: "Wizyta Śląskiej Federacji Przedsiębiorców Polskich w Kopalni Dolomit",
     date: "29 października 2025",
     category: "Współpraca",
-    image: null,
-    content: `Przedstawiciele firm zrzeszonych oraz współpracujących ze Śląską Federacją Przedsiębiorców Polskich (ŚFPP) 29 października 2025 r. odwiedzili nasze przedsiębiorstwo.
+    images: ["/1.jpg", "/4.jpeg", "/7.jpeg", "/3.jpeg", "/5.jpeg"],
+    content: `Przedstawiciele firm zrzeszonych oraz współpracujących ze Śląską Federacją Przedsiębiorców Polskich (ŚFPP) 29 października 2025 r. na zaproszenie Prezesa Kopalni, pana Janusza Kmiecika, odwiedzili nasze przedsiębiorstwo.
 
-Wizyta miała na celu zapoznanie się z nowoczesnymi technologiami wydobycia i przeróbki dolomitu stosowanymi w naszej kopalni. Goście mieli okazję zobaczyć najnowocześniejszy sprzęt górniczy, w tym wiertnicę HAUSHERR oraz systemy przesiewcze.
+Uczestnicy spotkania poznali historię powstania Kopalni, transformację technologiczną, nasze produkty oraz główne gałęzie przemysłu, z którymi współpracujemy. Prezes Kopalni, pan Janusz Kmiecik, opowiedział również o współpracy z lokalnym otoczeniem.
 
-Było to inspirujące spotkanie, które zaowocowało wieloma pomysłami na przyszłą współpracę.`
+Tradycje naszej firmy sięgają 120 lat, ale jesteśmy jedną z najnowocześniejszych kopalni odkrywkowych w Polsce. Współpracujemy z odbiorcami z różnych sektorów gospodarki, jak budownictwo drogowe, hutnictwo i rolnictwo. — Janusz Kmiecik, prezes PPUH Dolomit
+
+To już kolejne spotkanie w firmie członkowskiej ŚFPP. Takie wydarzenia są bardzo ważne — na miejscu możemy zobaczyć, jak poszczególne przedsiębiorstwa funkcjonują, jakie odnoszą sukcesy i z jakimi wyzwaniami się mierzą. To także doskonała okazja do wymiany doświadczeń i wzajemnego wsparcia firm zrzeszonych w ŚFPP. Naszym wspólnym zadaniem jest dbanie o konkurencyjność przedsiębiorstw z regionu woj. śląskiego i wspieranie ich w działalności na rynku polskim i międzynarodowym. — Michał Gawroński, przewodniczący ŚFPP`
   },
   "112-barborka-2": {
     title: "Barbórka 2024",
     date: "6 grudnia 2024",
     category: "Firma",
-    image: null,
+    images: ["/barborka24/9.jpg", "/8.jpg", "/barborka24/7.jpg", "/barborka24/6.jpg", "/barborka24/5.jpg", "/barborka24/4.jpg", "/barborka24/3b.jpg", "/barborka24/2b.jpg", "/barborka24/12.jpg", "/barborka24/11.jpg", "/barborka24/10.jpg"],
     content: `W dniu 6 grudnia w Sali Balowej Luksor w Porębie wraz z Załogą oraz zaproszonymi Gośćmi, obchodziliśmy Dzień Świętej Barbary - patronki górników.
 
-Tradycyjne barbórkowe spotkanie było okazją do podziękowania wszystkim pracownikom za ciężką pracę i zaangażowanie przez cały rok. Wręczono odznaczenia i nagrody dla najlepszych górników.
+Z tej okazji nasi zasłużeni Górnicy uhonorowani zostali państwowymi i wojewódzkimi odznaczeniami, wyróżnieniami, nagrodami i podziękowaniami za zaangażowanie oraz wkład w rozwój Naszego Przedsiębiorstwa.
 
-Dziękujemy wszystkim za obecność i wspólną zabawę do późnych godzin nocnych!`
+Zarząd Kopalni na swoje ręce przyjął wiele życzeń oraz podziękowań. Naszą uroczystość uświetnił swoim wspaniałym występem zespół Capri New Beat z Krakowa.
+
+Poniżej przedstawiamy piękne zdjęcia dzięki uprzejmości Europerspektywy.`
   },
   "107-informacja-o-zakonczeniu-eksploatacji-zloza-w-kopalni-zabkowice": {
-    title: "Zakończenie eksploatacji złoża Ząbkowice",
+    title: "Informacja o zakończeniu eksploatacji złoża w Kopalni Ząbkowice",
     date: "31 grudnia 2022",
     category: "Historia",
-    image: null,
-    content: `Z dniem 31.12.2022r. eksploatacja dolomitu ze złoża Ząbkowice Będzińskie I została zakończona. Po prawie 130 letnim okresie prowadzenia wydobycia nadszedł czas zagospodarowania terenów pogórniczych.
+    images: ["/historia1.jpg"],
+    content: `Z dniem 31.12.2022r. eksploatacja dolomitu ze złoża "Ząbkowice Będzińskie I" została zakończona. Po prawie 130 letnim okresie prowadzenia wydobycia nadszedł czas zagospodarowania terenów przekształconych robotami górniczymi. Zakończył się pewien etap w gospodarczej i kulturalnej historii Dąbrowy Górniczej, z którym związane było życie miejscowej ludności oraz kontynuowane były tradycje górnicze Zagłębia Dąbrowskiego. Działalność górniczo-hutnicza była prowadzona na terenie Ząbkowic od średniowiecza i związana była z wydobyciem i przeróbką rud cynku, żelaza, wapienia i przez wiele ostatnich lat dolomitu.
 
-Historia tego złoża sięga początków przemysłu ciężkiego na Górnym Śląsku. Przez dziesięciolecia nasza kopalnia dostarczała wysokiej jakości dolomit dla budownictwa, przemysłu i rolnictwa.
+Jeszcze w czasie prowadzenia wydobycia na wniosek naszego Przedsiębiorstwa, dla pogórniczych terenów po odkrywkowej eksploatacji dolomitu został opracowany "Miejscowy plan zagospodarowania przestrzennego miasta Dąbrowy Górniczej dla terenu górniczego Kopalni Dolomitu "Ząbkowice"", który następnie został przyjęty przez Radę Miejską Dąbrowy Górniczej uchwałą nr VIII/134/11 z dnia 22 czerwca 2011r. Ustalenia miejscowego planu określały zarówno przeznaczenie tymczasowe terenów objętych planem jak i ich przeznaczenie docelowe.
 
-Obecnie prowadzimy prace nad rekultywacją terenów i przygotowujemy nowe inwestycje, które pozwolą na dalszy rozwój przedsiębiorstwa.`
+Na podstawie zapisów planu został opracowany "Projekt rekultywacji wyrobiska po odkrywkowym wydobywaniu kopalin ze złoża dolomitu "Ząbkowice Będzińskie I" zlokalizowanego w Dąbrowie Górniczej" (wraz z późniejszym aneksem). Projekt rekultywacji został pozytywnie zaopiniowany przez Dyrektora Okręgowego Urzędu Górniczego w Katowicach i zatwierdzony przez Prezydenta Miasta Dąbrowy Górniczej decyzją nr WGN-II.6125.2.1.2018.DG.
+
+Technicznie zaprojektowano podzielenie terenów pogórniczych na trzy rejony: zachodni, środkowy i wschodni. Dla każdego z nich zostały określone kierunki zagospodarowania i sposoby przeprowadzenia rekultywacji.
+
+Rejon wschodni został przeznaczony pod zalesienie. Oprócz wylesionych przed eksploatacją terenów, przeznaczono pod zalesienie wcześniejsze nieużytki, powiększając tym samym tereny leśne o około 5 hektarów. W roku 2021 mimo trwającej nieopodal eksploatacji kolejne 5 hektarów zostało zrekultywowane, przekazane Nadleśnictwu Siewierz i zalesione. W 2023 roku przedsiębiorstwo planuje zrekultywować i zalesić 26 hektarów gruntów.
+
+Rejon środkowy został w miejscowym planie przeznaczony pod terenu sportu i rekreacji. Ustalenia projektu rekultywacji wyrobiska przewidują pozostawienie powstałej niecki po wydobyciu dolomitu i późniejsze zagospodarowanie jej w kierunku rekreacyjnym. Projektuje się na tym terenie wykonanie prac związanych z makroniwelacją terenu, wykonanie odwodnienia, wykonanie zabezpieczenia dolnych krawędzi skarp ostatecznych. Po zakończeniu rekultywacji możliwe będzie na terenie około 25 hektarów wykonanie infrastruktury sportowej i rekreacyjnej służącej społeczeństwu Dąbrowy Górniczej.
+
+Rejon zachodni został przeznaczony pod tereny zieleni urządzonej. W tym celu konieczne jest przywrócenie pierwotnej rzeźby terenu. Jak ustalono w projekcie rekultywacji do zasypania wyrobiska do poziomu terenów przyległych będą wykorzystane: ziemia z kamieniami, beton oraz gruz betonowy z rozbiórek i remontów, gruz ceglany, odpady innych materiałów ceramicznych i elementów wyposażenia (wykonane z ceramiki). Są to materiały obojętne dla środowiska, pozwalające odtworzyć warstwę biologicznie czynną. Wszystkie stosowane materiały są zgodne z Rozporządzeniem Ministra Środowiska z dnia 11 maja 2015r. w sprawie odzysku odpadów poza instalacjami. Ponadto przedsiębiorstwo uzyskało decyzję Marszałka Województwa Śląskiego nr 3609/OS/2018 zezwalające na przetwarzanie w/w odpadów. Wszelkie dostawy są ewidencjonowane w systemie Baza Danych o Odpadach przez wytwarzającego, transportującego i przyjmującego. Ponadto w przedsiębiorstwie został wdrożony system monitoringu i kontroli dowożonego materiału przeznaczonego do zasypywania wyrobiska. Z organizacją przyjmowania odpadów, zatwierdzoną przez Prezesa Przedsiębiorstwa, zostały zapoznane wszystkie osoby zatrudnione przy ich przyjmowaniu.
+
+W rejonie zachodnim w 2022r. została zakończona rekultywacja techniczna gruntów na obszarze 7 hektarów. W bieżącym roku zostanie zakupione ponad 6 000 sztuk sadzonek, które będą wykorzystane do wykonania rekultywacji biologicznej. W kolejnych latach będą prowadzone prace związane z rekultywacją techniczną oraz biologiczną pozostałych terenów, co pozwoli utworzyć kompleks zieleni urządzonej o powierzchni około 10 hektarów.
+
+W projekcie rekultywacji zostały zestawione materiały niezbędne do przeprowadzenia rekultywacji.
+
+Rekultywacja techniczna:
+- 2 500 000 ton materiału pozyskanego z rynku,
+- 1 600 000 ton materiału własnego,
+- 15 000 ton kruszyw,
+- Inne materiały: piasek, geowłóknina, koryta odwadniające betonowe, płyty betonowe, rury żelbetowe, chudy beton, i inne
+
+Rekultywacja biologiczna:
+- 33 000 szt. sadzonek,
+- 2 135 kg nasion traw,
+- 500 kg nawozów
+
+Cały proces rekultywacji wyrobiska został przewidziany na 5 lat, więc jego zakończenie jest przewidywane najpóźniej do 31.12.2027 roku.`
   },
 };
 
@@ -172,16 +208,20 @@ export default async function ArticlePage({ params }: PageProps) {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-stone-200">
-            {article.image && (
-              <div className="relative w-full h-64 md:h-96 mb-8 rounded-xl overflow-hidden">
-                <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
-              </div>
-            )}
-            <div className="prose prose-stone max-w-none">
+            <div className="prose prose-stone max-w-none mb-8">
               {article.content.split('\n\n').map((paragraph, i) => (
                 <p key={i} className="text-stone-600 leading-relaxed mb-4">{paragraph}</p>
               ))}
             </div>
+            {article.images.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {article.images.map((img, idx) => (
+                  <div key={idx} className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
+                    <img src={img} alt={`${article.title} - zdjęcie ${idx + 1}`} className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
           
           <div className="mt-8 text-center">

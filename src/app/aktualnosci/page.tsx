@@ -7,7 +7,7 @@ const news = [
     date: "15 stycznia 2025",
     category: "Rolnictwo",
     excerpt: "Przeczytaj poniższy artykuł i dowiedz się dlaczego warto już dziś pomyśleć o wapnowaniu swojego pola!",
-    image: null
+    image: "/zima_wapnowanie.jpeg"
   },
   {
     id: "115-spotkanie-barborkowe",
@@ -22,7 +22,7 @@ const news = [
     title: "Wizyta Śląskiej Federacji Przedsiębiorców Polskich w Kopalni Dolomit",
     date: "29 października 2025",
     category: "Współpraca",
-    excerpt: "Przedstawiciele firm zrzeszonych oraz współpracujących ze Śląską Federacją Przedsiębiorców Polskich (ŚFPP) 29 października 2025 r. odwiedzili nasze przedsiębiorstwo.",
+    excerpt: "Przedstawiciele firm zrzeszonych oraz współpracujących ze Śląską Federacją Przedsiębiorców Polskich (ŚFPP) 29 października 2025 r. na zaproszenie Prezesa Kopalni, pana Janusza Kmiecika, odwiedzili nasze przedsiębiorstwo.",
     image: null
   },
   {
@@ -35,10 +35,10 @@ const news = [
   },
   {
     id: "107-informacja-o-zakonczeniu-eksploatacji-zloza-w-kopalni-zabkowice",
-    title: "Zakończenie eksploatacji złoża Ząbkowice",
+    title: "Informacja o zakończeniu eksploatacji złoża w Kopalni Ząbkowice",
     date: "31 grudnia 2022",
     category: "Historia",
-    excerpt: "Z dniem 31.12.2022r. eksploatacja dolomitu ze złoża Ząbkowice Będzińskie I została zakończona. Po prawie 130 letnim okresie prowadzenia wydobycia nadszedł czas zagospodarowania terenów.",
+    excerpt: "Z dniem 31.12.2022r. eksploatacja dolomitu ze złoża Ząbkowice Będzińskie I została zakończona. Po prawie 130 letnim okresie prowadzenia wydobycia nadszedł czas zagospodarowania terenów przekształconych robotami górniczymi.",
     image: null
   },
 ];
@@ -55,36 +55,34 @@ export default function AktualnosciPage() {
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {news.map((item, i) => (
               <Link 
                 key={i} 
                 href={`/aktualnosci/${item.id}`}
-                className="block bg-white rounded-2xl p-8 shadow-sm border border-stone-100 hover:shadow-lg transition-all group"
+                className="block bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-100 hover:shadow-xl hover:border-amber-200 transition-all group"
               >
-                <div className="flex flex-col md:flex-row gap-6">
-                  {item.image && (
-                    <div className="relative w-full md:w-64 h-48 rounded-xl overflow-hidden flex-shrink-0">
-                      <img 
-                        src={item.image} 
-                        alt={item.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
-                  <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
-                      <span className="text-sm text-amber-600 font-medium bg-amber-50 px-3 py-1 rounded-full w-fit">{item.category}</span>
-                      <span className="text-stone-500 text-sm">{item.date}</span>
-                    </div>
-                    <h2 className="text-2xl font-bold text-stone-900 mb-4 group-hover:text-amber-600 transition-colors">{item.title}</h2>
-                    <p className="text-stone-600 leading-relaxed">{item.excerpt}</p>
-                    <div className="mt-4 text-amber-600 font-medium inline-flex items-center gap-2">
-                      Czytaj więcej
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
+                {item.image && (
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-xs text-amber-600 font-medium bg-amber-50 px-2 py-1 rounded-full">{item.category}</span>
+                    <span className="text-stone-400 text-xs">{item.date}</span>
+                  </div>
+                  <h2 className="text-lg font-bold text-stone-900 mb-3 group-hover:text-amber-600 transition-colors line-clamp-2">{item.title}</h2>
+                  <p className="text-stone-600 text-sm line-clamp-3">{item.excerpt}</p>
+                  <div className="mt-4 text-amber-600 font-medium text-sm inline-flex items-center gap-1">
+                    Czytaj więcej
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                   </div>
                 </div>
               </Link>
