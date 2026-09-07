@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const news = [
   {
+    id: "117-wyprzedaz-uzywanych-maszyn",
+    title: "Wyprzedaż używanych maszyn",
+    date: null,
+    category: "Ogłoszenia",
+    excerpt: "Kruszarki szczękowe MAKRUM 40.17, stożkowe 1044 Prerov oraz mobilna kruszarka udarowa TEREX FINLAY I-1312 Impactor. Sprawdź oferty sprzedaży na OLX.",
+    image: null
+  },
+  {
     id: "116-zima-to-dobry-moment-na-wapnowanie-pol",
     title: "Zima to dobry moment na wapnowanie pól",
     date: "15 stycznia 2025",
@@ -74,7 +82,7 @@ export default function AktualnosciPage() {
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs text-amber-600 font-medium bg-amber-50 px-2 py-1 rounded-full">{item.category}</span>
-                    <span className="text-stone-400 text-xs">{item.date}</span>
+                    {item.date && <span className="text-stone-400 text-xs">{item.date}</span>}
                   </div>
                   <h2 className="text-lg font-bold text-stone-900 mb-3 group-hover:text-amber-600 transition-colors line-clamp-2">{item.title}</h2>
                   <p className="text-stone-600 text-sm line-clamp-3">{item.excerpt}</p>

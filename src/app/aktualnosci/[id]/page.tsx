@@ -2,11 +2,28 @@ import Link from "next/link";
 
 const newsData: Record<string, {
   title: string;
-  date: string;
+  date: string | null;
   category: string;
   content: string;
   images: string[];
+  links?: { label: string; href: string }[];
+  source?: string;
 }> = {
+  "117-wyprzedaz-uzywanych-maszyn": {
+    title: "Wyprzedaż używanych maszyn",
+    date: null,
+    category: "Ogłoszenia",
+    images: [],
+    content: `W ofercie sprzedaży używanych maszyn znajdują się dwie kruszarki szczękowe MAKRUM 40.17, dwie kruszarki stożkowe 1044 Prerov oraz mobilna kruszarka udarowa TEREX FINLAY I-1312 Impactor.
+
+Szczegóły poszczególnych maszyn znajdziesz w ogłoszeniach na OLX:`,
+    links: [
+      { label: "Kruszarka szczękowa MAKRUM 40.17 — 2 sztuki", href: "https://www.olx.pl/d/oferta/kruszarka-szczekowa-makrum-40-17-CID4269-ID1b4zgh.html?bs=olx_pro_listing" },
+      { label: "Kruszarka stożkowa 1044 Prerov — 2 sztuki", href: "https://www.olx.pl/d/oferta/kruszarka-stozkowa-1044-prerov-CID4269-ID1b4xtg.html?bs=olx_pro_listing&isPreviewActive=0&sliderIndex=0" },
+      { label: "Mobilna kruszarka udarowa TEREX FINLAY I-1312 Impactor", href: "https://www.olx.pl/d/oferta/kruszarka-udarowa-mobilna-terex-finlay-i-1312-impactor-CID4269-ID1b4x79.html?bs=olx_pro_listing&isPreviewActive=0&sliderIndex=0" },
+    ],
+    source: "http://www.dolomit.com.pl/wiadomosci/117-wyprzedaz-uzywanych-maszyn.html",
+  },
   "116-zima-to-dobry-moment-na-wapnowanie-pol": {
     title: "Zima to dobry moment na wapnowanie pól",
     date: "15 stycznia 2025",
@@ -200,7 +217,7 @@ export default async function ArticlePage({ params }: PageProps) {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{article.title}</h1>
           <div className="flex items-center gap-4 text-amber-200">
             <span className="bg-amber-500/30 px-3 py-1 rounded-full text-sm">{article.category}</span>
-            <span>{article.date}</span>
+            {article.date && <span>{article.date}</span>}
           </div>
         </div>
       </section>
@@ -213,6 +230,19 @@ export default async function ArticlePage({ params }: PageProps) {
                 <p key={i} className="text-stone-600 leading-relaxed mb-4">{paragraph}</p>
               ))}
             </div>
+            {article.links && (
+              <ul className="space-y-3 mb-8">
+                {article.links.map((link) => (
+                  <li key={link.href}>
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-4 border border-stone-200 p-5 text-stone-800 font-medium hover:bg-stone-50 hover:border-amber-500 transition-colors">
+                      <span>{link.label}<span className="block text-sm font-normal text-stone-500 mt-1">Zobacz ogłoszenie na OLX (nowa karta)</span></span>
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {article.source && <p className="text-sm text-stone-500 mb-8">Źródło: <a href={article.source} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">ogłoszenie na stronie DOLOMIT</a>.</p>}
             {article.images.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {article.images.map((img, idx) => (

@@ -1,50 +1,47 @@
+import Image from "next/image";
+import Link from "next/link";
 import HeroSlider from "@/components/HeroSlider";
 
 export default function Home() {
   return (
-    <>
+    <div className="home-page">
       <HeroSlider />
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-stone-800">
-            Nasze produkty
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-stone-100 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold mb-4 text-stone-800">Kruszywa budowlane</h3>
-              <p className="text-stone-600 mb-6">
-                Wysokiej jakości kruszywa dla budownictwa, infrastruktury i robót ziemnych. 
-                Produkowane z własnego złoża dolomitu.
-              </p>
-              <a href="/kruszywa" className="inline-flex items-center text-amber-600 font-semibold hover:text-amber-700">
-                Zobacz ofertę →
-              </a>
-            </div>
-            <div className="bg-stone-100 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold mb-4 text-stone-800">Wapno nawozowe</h3>
-              <p className="text-stone-600 mb-6">
-                Wapno nawozowe z magnezem - certyfikowane przez IUNG Puławy. 
-                Idealne dla rolnictwa i ogrodnictwa.
-              </p>
-              <a href="/nawozy" className="inline-flex items-center text-amber-600 font-semibold hover:text-amber-700">
-                Zobacz produkty →
-              </a>
-            </div>
-          </div>
+      <section className="proof-strip" aria-label="Co nas wyróżnia">
+        <div className="site-width proof-grid">
+          <div><strong>130<span> lat</span></strong><p>tradycji górniczej w regionie</p></div>
+          <div><strong>Własne złoże<span> ↗</span></strong><p>dolomit z Chruszczobrodu</p></div>
+          <div><strong>Sprawdzona jakość</strong><p>produkty z dokumentacją jakościową</p></div>
+          <Link href="/o-firmie/certyfikaty" className="proof-link">Poznaj nasze standardy <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
-      <section className="py-16 bg-stone-100">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-stone-800">O firmie</h2>
-          <p className="text-lg text-stone-600 mb-8 max-w-2xl mx-auto">
-            Ponad 130 lat historii. Własne złoże dolomitu w Ząbkowicach Śląskich. 
-            Polski producent z certyfikowaną jakością.
-          </p>
-          <a href="/o-firmie" className="inline-flex items-center gap-2 bg-stone-800 hover:bg-stone-900 text-white font-semibold px-8 py-4 rounded-xl transition-all">
-            Poznaj nas →
-          </a>
+
+      <section className="offer-section site-width" id="oferta">
+        <div className="section-heading">
+          <div><p className="eyebrow">01 / NASZA OFERTA</p><h2>Jeden surowiec.<br /><span>Wiele możliwości.</span></h2></div>
+          <p>Od fundamentów dróg i budynków po żyzną glebę.<br className="desktop-break" /> Odkryj naturalny potencjał dolomitu.</p>
+        </div>
+        <div className="product-grid">
+          <Link href="/kruszywa" className="product-card">
+            <Image src="/1edi9.jpg" alt="Załadunek kruszywa dolomitowego na samochód ciężarowy" fill sizes="(max-width: 700px) 100vw, 50vw" />
+            <div className="product-shade" /><span className="product-category">DLA BUDOWNICTWA</span>
+            <div className="product-copy"><span className="product-number">01</span><h3>Kruszywa<br />budowlane</h3><p>Solidna podstawa Twojej inwestycji.</p><span className="product-cta">Zobacz kruszywa <span aria-hidden="true">↗</span></span></div>
+          </Link>
+          <Link href="/nawozy" className="product-card">
+            <Image src="/Hala_magazynowa_1.jpg" alt="Wapno nawozowe przechowywane w hali magazynowej" fill sizes="(max-width: 700px) 100vw, 50vw" />
+            <div className="product-shade" /><span className="product-category">DLA ROLNICTWA</span>
+            <div className="product-copy"><span className="product-number">02</span><h3>Wapno<br />nawozowe</h3><p>Naturalne wsparcie gleby. Potencjał plonów.</p><span className="product-cta">Poznaj wapno z magnezem <span aria-hidden="true">↗</span></span></div>
+          </Link>
+        </div>
+        <div className="offer-help"><p>Dobry materiał to początek. Pomożemy Ci wybrać właściwy.</p><Link href="/kontakt">Porozmawiajmy o Twoich potrzebach <span aria-hidden="true">↗</span></Link></div>
+      </section>
+
+      <section className="heritage-section">
+        <div className="site-width heritage-grid">
+          <div className="heritage-image"><Image src="/dz6.jpg" alt="Rozległe wyrobisko kopalni dolomitu" fill sizes="(max-width: 800px) 100vw, 50vw" /><div className="heritage-badge"><strong>130</strong><span>LAT GÓRNICZEJ<br />TRADYCJI</span></div></div>
+          <div className="heritage-copy"><p className="eyebrow">02 / NASZE KORZENIE</p><h2>Z tej ziemi.<br />Z myślą o <span>przyszłości.</span></h2><p>Nasza historia zaczęła się w Zagłębiu Dąbrowskim. Przez pokolenia poznawaliśmy dolomit, rozwijaliśmy produkcję i budowaliśmy doświadczenie.</p><p>Dziś kontynuujemy tę tradycję w kopalni Chruszczobród, dostarczając surowiec dla budownictwa i rolnictwa.</p><Link href="/o-firmie/historia" className="text-link">Odkryj naszą historię <span aria-hidden="true">↗</span></Link></div>
         </div>
       </section>
-    </>
+      <section className="contact-band"><div className="site-width contact-band-inner"><div><p className="eyebrow">ZACZNIJMY OD ROZMOWY</p><h2>Solidna współpraca<br />zaczyna się tutaj.</h2></div><div><Link href="/kontakt" className="button button-dark">Skontaktuj się z nami <span aria-hidden="true">↗</span></Link><a href="tel:+48326390727" className="contact-phone">Dział sprzedaży: +48 32 639 07 27</a></div></div></section>
+    </div>
   );
 }
