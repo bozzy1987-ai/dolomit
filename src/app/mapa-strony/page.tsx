@@ -7,7 +7,7 @@ export default function MapaStronyPage() {
       { label: "Certyfikaty", href: "/o-firmie/certyfikaty" },
       { label: "Galeria", href: "/o-firmie/galeria" },
       { label: "Praca", href: "/o-firmie/praca" },
-      { label: "Dotacja", href: "/o-firmie/dotacja" },
+      { label: "Dotacja", href: "/dotacje" },
       { label: "Działalność społeczna", href: "/o-firmie/dzialalnosc-spoleczna" },
       { label: "Inwestycje", href: "/o-firmie/inwestycje" },
       { label: "Akcjonariusze", href: "/o-firmie/akcjonariusze" },
@@ -19,6 +19,7 @@ export default function MapaStronyPage() {
     ]},
     { section: "Informacje", items: [
       { label: "Aktualności", href: "/aktualnosci" },
+      { label: "Druki zamówień i dokumenty", href: "/do-pobrania" },
       { label: "Kontakt", href: "/kontakt" },
       { label: "Polityka prywatności", href: "/polityka-prywatnosci" },
     ]},

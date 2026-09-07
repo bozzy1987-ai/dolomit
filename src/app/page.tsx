@@ -35,6 +35,12 @@ export default function Home() {
         <div className="offer-help"><p>Dobry materiał to początek. Pomożemy Ci wybrać właściwy.</p><Link href="/kontakt">Porozmawiajmy o Twoich potrzebach <span aria-hidden="true">↗</span></Link></div>
       </section>
 
+      <section className="site-width pb-16" aria-labelledby="downloads-title">
+        <div className="border-y border-stone-300 py-9 flex flex-col md:flex-row md:items-center justify-between gap-7">
+          <div><p className="eyebrow">DLA KLIENTA / DO POBRANIA</p><h2 id="downloads-title">Wszystko do zamówienia.</h2><p className="text-stone-600 text-sm mt-4">Druki zamówień, formularze i deklaracje właściwości użytkowych.</p></div>
+          <Link href="/do-pobrania" className="button button-dark shrink-0 self-start md:self-center">Pobierz dokumenty <span aria-hidden="true">↓</span></Link>
+        </div>
+      </section>
       <section className="heritage-section">
         <div className="site-width heritage-grid">
           <div className="heritage-image"><Image src="/dz6.jpg" alt="Rozległe wyrobisko kopalni dolomitu" fill sizes="(max-width: 800px) 100vw, 50vw" /><div className="heritage-badge"><strong>130</strong><span>LAT GÓRNICZEJ<br />TRADYCJI</span></div></div>

@@ -28,6 +28,9 @@ export default function OdpadyPage() {
           </div>
         </div>
       </section>
+      <section className="max-w-7xl mx-auto px-4 pb-16">
+        <Link href="/do-pobrania" className="inline-flex gap-6 items-center bg-stone-800 text-white px-7 py-4 font-semibold">Druki zamówień i dokumenty <span aria-hidden="true">↓</span></Link>
+      </section>
     </div>
   );
 }

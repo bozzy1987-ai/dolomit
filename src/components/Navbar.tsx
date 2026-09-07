@@ -6,12 +6,12 @@ import { usePathname } from "next/navigation";
 import Brand from "./Brand";
 
 const companyLinks = [
-  ["/o-firmie", "Poznaj firmę"], ["/o-firmie/historia", "Historia"],
+  ["/o-firmie", "Poznaj firmę"], ["/dotacje", "Dotacje"], ["/o-firmie/historia", "Historia"],
   ["/o-firmie/certyfikaty", "Certyfikaty"], ["/o-firmie/galeria", "Galeria"],
   ["/o-firmie/praca", "Praca"], ["/o-firmie/dzialalnosc-spoleczna", "Działalność społeczna"],
   ["/o-firmie/inwestycje", "Inwestycje"], ["/o-firmie/akcjonariusze", "Akcjonariusze"],
 ];
-const links = [["/kruszywa", "Kruszywa"], ["/nawozy", "Wapno nawozowe"], ["/aktualnosci", "Aktualności"], ["/dotacje", "Dotacje"]];
+const links = [["/kruszywa", "Kruszywa"], ["/nawozy", "Wapno nawozowe"], ["/aktualnosci", "Aktualności"], ["/do-pobrania", "Do pobrania"]];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
